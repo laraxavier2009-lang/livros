@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título da minha pagina</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        
+        :root {
+            
+            --green-dark: #0e7a20; 
+            --primary-color: #119627; 
+            --green-light: #28a745; 
+            --text-color: #333;
+            --bg-light: #f3fff7;
+            --bg-card: #ffffff; 
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light); 
+            color: var(--text-color);
+            line-height: 1.7; 
+            transition: background-color 0.3s;
+        }
+
+        
+        header {
+            text-align: center;
+            
+            background: linear-gradient(135deg, var(--primary-color), var(--green-light)); 
+            color: white;
+            padding: 40px 0 20px 0;
+            box-shadow: 0 6px 15px rgba(17, 150, 39, 0.2); 
+            margin-bottom: 40px;
+        }
+
+        header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 6px solid var(--bg-light); 
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .ceti-paulistana {
+            margin: 0;
+            font-size: 2.3em; 
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+        }
+
+        
+        main {
+            text-align: center;
+            padding: 0 20px 40px 20px; 
+        }
+
+        .acesso-aos-livros {
+            font-size: 1.9em;
+            color: var(--green-dark);
+            margin-bottom: 30px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            animation: fadeIn 1.5s ease-out; 
+        }
+
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+       
+        main a.btn-livros { 
+            display: inline-block;
+            background-color: var(--green-light);
+            color: white;
+            padding: 14px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.25em;
+            font-weight: 600;
+            transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+            box-shadow: 0 6px 15px rgba(40, 167, 69, 0.5); 
+            margin-bottom: 40px; /
+        }
+
+        main a.btn-livros:hover {
+            background-color: var(--green-dark); 
+            transform: translateY(-3px); 
+            box-shadow: 0 8px 20px rgba(14, 122, 32, 0.7);
+        }
+
+        .sobre-titulo {
+            text-align: center;
+            color: var(--green-dark);
+            font-size: 2.5em;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            position: relative;
+        }
+
+        .sobre-titulo::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        
+        .sobre-card { 
+            max-width: 900px;
+            margin: 20px auto 0 auto;
+            padding: 30px;
+            text-align: justify;
+            font-size: 1.1em; 
+            background-color: var(--bg-card);
+            border-radius: 12px;
+            border-left: 5px solid var(--primary-color); 
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            color: #555; 
+        }
+        
+       
+        .sobre-card ul {
+            list-style: none; 
+            padding-left: 0;
+            margin-top: 15px;
+        }
+        
+        .sobre-card ul li {
+            margin-bottom: 10px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+        }
+
+        
+        .sobre-card figure {
+            margin: 30px 0 0 0;
+            padding: 15px 20px;
+            background-color: var(--bg-light);
+            border-radius: 8px;
+            border-top: 2px solid var(--primary-color);
+            text-align: center;
+        }
+
+        .sobre-card figure blockquote {
+            margin: 0;
+            font-style: italic;
+            font-size: 1.25em; 
+            color: var(--primary-color); 
+            position: relative; 
+            padding: 0 10px; 
+        }
+
+        
+        .sobre-card figure blockquote::before {
+            content: "“";
+            color: var(--green-dark); 
+            font-size: 3em; 
+            line-height: 0.1;
+            margin-right: 5px;
+            vertical-align: -0.4em;
+            display: inline-block;
+        }
+
+        
+        .sobre-card figure blockquote::after {
+            content: "”";
+            color: var(--green-dark);
+            font-size: 3em;
+            line-height: 0.1;
+            margin-left: 5px;
+            vertical-align: -0.4em;
+            display: inline-block;
+        }
+
+        .sobre-card figure figcaption {
+            margin-top: 10px;
+            font-size: 0.95em;
+            color: #666;
+        }
+        
+      
+        .sobre-card strong {
+            color: var(--primary-color);
+            font-weight: 700; 
+            text-transform: uppercase; 
+        }
+        
+       
+        .sobre-card span.icon {
+            font-size: 1.3em;
+            margin-right: 8px;
+            color: var(--green-dark); 
+            flex-shrink: 0; 
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="download%20(1).jpg" alt="Logo do CETI Paulistana">
+            <h2 class="ceti-paulistana">CETI PAULISTANA</h2>
+        </div>
+    </header>
+
+    <main>
+        <p class="acesso-aos-livros">ACESSO RÁPIDO AO CONHECIMENTO</p>
+        <a href="index(livros).html" class="btn-livros">📚 LIVROS EM PDF</a>
+        
+        <h2 class="sobre-titulo">SOBRE NÓS</h2>
+        <div class="sobre-card">
+            <p>
+                <span class="icon">📖</span> <strong>SITE EDUCACIONAL:</strong> Um Projeto Incrível do CETI Paulistana.
+                <br>
+                Este site de leitura foi criado como um projeto especial por alunos do <strong>CETI PAULISTANA</strong> (Centro Estadual de Tempo Integral). Nosso objetivo principal é:
+            </p>
+
+            <ul>
+                <li><span class="icon">✅</span> Fomentar a Aprendizagem e estimular o hábito da leitura.</li>
+                <li><span class="icon">💻</span> Aplicar os conhecimentos adquiridos em tecnologia.</li>
+            </ul>
+            
+            <figure>
+                <blockquote cite="https://pt.wikiquote.org/wiki/Jorge_Luis_Borges">
+                    Sempre imaginei que o paraíso fosse uma espécie de biblioteca.
+                </blockquote>
+                <figcaption>
+                    — Jorge Luis Borges
+                </figcaption>
+            </figure>
+            
+            <p style="margin-top: 20px; text-align: center;">
+                Desfrute do nosso acervo e participe da nossa jornada de conhecimento!
+            </p>
+        </div>
+    </main>
+
+</body>
+</html>

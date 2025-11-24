@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acervo de Livros em PDF - CETI Paulistana</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        
+        :root {
+            --green-dark: #0e7a20; 
+            --primary-color: #119627; 
+            --green-light: #28a745; 
+            --text-color: #333;
+            --bg-light: #f3fff7;
+            --bg-card: #ffffff;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: var(--bg-light); 
+            color: var(--text-color);
+            text-align: center; 
+        }
+
+       
+        .titulo-livros {
+            font-size: 3em;
+            font-weight: 700;
+            color: var(--green-dark);
+            margin-bottom: 40px;
+            border-bottom: 4px solid var(--primary-color);
+            display: inline-block; 
+            padding-bottom: 10px;
+        }
+
+        
+        a[href="index(principal).html"] {
+            display: inline-block;
+            background-color: var(--green-dark);
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+        
+        a[href="index(principal).html"]:hover {
+            background-color: var(--primary-color);
+        }
+
+        
+        body > div {
+            max-width: 500px; 
+            margin: 20px auto;
+            padding: 20px;
+            background-color: var(--bg-card);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            display: flex; 
+            align-items: center;
+            justify-content: space-between;
+            text-align: left;
+            transition: transform 0.3s;
+            border-left: 5px solid var(--green-light);
+        }
+        
+        body > div:hover {
+            transform: translateY(-5px); 
+        }
+
+       
+        body > div img {
+            width: 80px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-right: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        
+        body > div a {
+            flex-grow: 1; 
+            text-align: right;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            color: var(--green-dark);
+            padding: 10px 20px;
+            border: 2px solid var(--green-light);
+            border-radius: 50px;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        }
+
+       
+        body > div a:hover {
+            background-color: var(--green-light);
+            color: white;
+            border-color: var(--green-dark);
+            box-shadow: 0 4px 10px rgba(40, 167, 69, 0.4);
+        }
+
+     
+        @media (max-width: 600px) {
+            body > div {
+                flex-direction: column; 
+                text-align: center;
+            }
+            body > div img {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            body > div a {
+                width: 100%;
+                box-sizing: border-box;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <a href="index(principal).html">← Voltar para a Página Principal</a>
+    
+    <h1 class="titulo-livros">📚 Acervo de Livros em PDF</h1>
+    
+    <div>
+        <img src="o-relogio-de-ouro.jpg" alt="Capa do livro O Relógio de Ouro">
+        <a href="relogio-de-ouro-completo.pdf" download>BAIXAR: O RELÓGIO DE OURO</a>
+    </div>
+
+    </body>
+</html>
